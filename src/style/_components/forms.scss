@@ -1,0 +1,21 @@
+.c-form-input {
+    display: block;
+
+    border: 1px solid rgb(67, 140, 92);
+    border-radius: 10px;
+
+    height: 40px;
+    width: 300px;
+
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.c-register button,
+.c-login button {
+    font-size: 16px;
+    font-weight: 600;
+
+    width: 100%;
+}

@@ -1,0 +1,137 @@
+// Reset
+
+html {
+    font-size: 10px;
+}
+
+main {
+    position: relative;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility !important;
+    margin: 0;
+}
+
+* {
+    outline: none !important;
+
+    scroll-margin-top: 90px;
+}
+
+
+// Transitions
+
+button,
+.btn,
+a {
+    transition: all $transition;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+}
+
+
+// Text
+
+//** text selection
+// ::selection {
+//     background-color: lighten(theme-color("primary"), 50%);
+// }
+
+// h1, .h1, h2, .h2, h3, .h3,
+// h4, .h4, h5, .h5, h6, .h6 {
+// }
+
+// .h1, h1 {}
+
+// .h2, h2 {}
+
+// .h3, h3 {}
+
+// .h4, h4 {}
+
+// .h5, h5 {}
+
+// .h6, h6 {}
+
+
+// Forms
+
+textarea {
+    resize: vertical;
+}
+
+
+// Misc
+
+abbr[title] {
+    text-decoration: none;
+    border-bottom: 0;
+    cursor: inherit !important;
+}
+
+.c-title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: clamp(34px, 7vw, 72px);
+    font-weight: 600;
+    line-height: 1;
+
+    strong,
+    b {
+        font-weight: 600;
+        color: $primary;
+    }
+}
+
+.c-hr {
+    background: $gray-3;
+    height: 1px;
+    width: 100%;
+}
+
+.lazy {
+    opacity: 0;
+    transition: opacity .2s $cubic-bezier;
+
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+
+@include media-breakpoint-up(md) {
+    * {
+        scroll-margin-top: 105px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    * {
+        scroll-margin-top: 120px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    html {
+        &.is-menu-open {
+            overflow: hidden;
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

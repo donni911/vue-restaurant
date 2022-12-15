@@ -1,9 +1,9 @@
 <template>
     <header class="c-header">
-        <a href="" class="c-header-link">Home</a>
-        <a href="" class="c-header-link">Add Restaurant</a>
-        <a href="" class="c-header-link">Update</a>
+        <router-link class="c-header-link" to="/">Home</router-link>
+        <router-link class="c-header-link" to="/add">Add Restaurant</router-link>
         <a href="" class="c-header-link" @click="logout">Logout</a>
+
     </header>
 </template>
 
@@ -39,6 +39,11 @@ export default {
 }
 
 .c-header-link:hover {
+    background: var(--hot-orange);
+    color: var(--white);
+}
+
+.c-header-link.active {
     background: var(--hot-orange);
     color: var(--white);
 }

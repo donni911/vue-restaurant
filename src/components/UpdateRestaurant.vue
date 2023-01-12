@@ -1,6 +1,6 @@
 <template>
     <CHEader></CHEader>
-    <h1> Hello {{name ? name : 'User'}}! Welcome on Add Restaurant Page</h1>
+    <h1> Hello {{ name ? name : 'User' }}! Welcome on Add Restaurant Page</h1>
     <form action="" class="c-register" @submit.prevent>
         <input class="c-form-input" type="text" name="name" placeholder="Enter Name" v-model="restaurant.name">
         <input class="c-form-input" type="text" name="address" placeholder="Enter Address" v-model="restaurant.address">
